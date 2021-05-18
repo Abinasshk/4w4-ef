@@ -99,7 +99,7 @@ function convertirTableau(&$tPropriété)
 	$tPropriété['sigle'] = substr($tPropriété['titre'], 0, 7);
 	$tPropriété['nbHeure'] = substr($tPropriété['titre'],-4,3);
 	$tPropriété['titrePartiel'] = substr($tPropriété['titre'],8,-6);
-	$tPropriété['session'] = substr($tPropriété['titre'], 4,1);
+	$tPropriété['session'] = get_field('session');
 	$tPropriété['typeCours'] = get_field('type_de_cours');
 }
 
